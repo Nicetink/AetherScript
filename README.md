@@ -27,7 +27,7 @@ AetherScript is a beginner-friendly language with a clean, Python-like syntax, p
    print("Sum: ");
    print(sum); // Outputs: 15
    ```
-4. Explore the [Documentation](https://your-website.com/docs.html](https://nicetink.github.io/webdoc) for detailed guides.
+4. Explore the [Documentation](https://nicetink.github.io/webdoc) for detailed guides.
 
 ## 📸 Screenshots
 ![AetherScript IDE](img/screenshot-hero.png)
@@ -47,11 +47,11 @@ AetherScript is in early development, supporting:
 - Structs and modules
 
 ## 🤝 Contributing
-We welcome contributions! Check out our [Contributing Guide](CONTRIBUTING.md) to get started. Join the discussion on [Discord](#) or open an issue to share ideas.
+We welcome contributions! Check out our [Contributing Guide](CONTRIBUTING.md) to get started. Join the discussion on [Discord] Not usable(#) or open an issue to share ideas.
 
 ## 📚 Resources
-- [Official Website](https://your-website.com)
-- [Documentation](https://your-website.com/docs.html](https://nicetink.github.io/webdoc)
+- [Official Website](https://nicetink.github.io/AetherScript/)
+- [Documentation](https://nicetink.github.io/webdoc)
 
 ## 📝 License
 AetherScript is licensed under the [NSPL License](LICENSE).
