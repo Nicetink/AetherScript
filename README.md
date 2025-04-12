@@ -1,122 +1,125 @@
-This is Python version 3.14.0 alpha 7
-CPython build status on GitHub Actions CPython build status on Azure DevOps Python Discourse chat
-Copyright © 2001 Python Software Foundation. All rights reserved.
+**A modern programming language designed for simplicity, safety, and performance.**
 
-See the end of this file for further copyright and license information.
+AetherScript is a beginner-friendly language with a clean, Python-like syntax, perfect for learning to code or building simple applications. Inspired by the sleek aesthetics of Visual Studio Code, AetherScript offers an intuitive development experience through its dedicated IDE.
 
-Contents
+## ✨ Features
+- **Simple Syntax**: Write clear code with minimal boilerplate using `let` for variables and `print` for output.
+- **Arithmetic Operations**: Supports `+`, `-`, `*`, `/` for numerical computations.
+- **Lightweight IDE**: Run your `.aether` scripts in the AetherScript IDE, built with Python and PyQt6.
+- **Memory Safety**: Designed with safety in mind, inspired by Rust (future goal).
+- **Open Source**: Licensed under MIT, welcoming contributions from the community.
 
-General Information
-Contributing to CPython
-Using Python
-Build Instructions
-Profile Guided Optimization
-Link Time Optimization
-What's New
-Documentation
-Testing
-Installing multiple versions
-Release Schedule
-Copyright and License Information
-General Information
-Website: https://www.python.org
-Source code: https://github.com/python/cpython
-Issue tracker: https://github.com/python/cpython/issues
-Documentation: https://docs.python.org
-Developer's Guide: https://devguide.python.org/
-Contributing to CPython
-For more complete instructions on contributing to CPython development, see the Developer Guide.
+## 🚀 Getting Started
+1. **Install Dependencies**:
+   ```bash
+   pip install PyQt6
+   ```
+2. **Run the IDE**:
+   ```bash
+   python aetheride.py
+   ```
+3. **Write Your First Program**:
+   ```aether
+   // Simple calculator
+   let a = 10;
+   let b = 5;
+   let sum = a + b;
+   print("Sum: ");
+   print(sum); // Outputs: 15
+   ```
+4. Explore the [Documentation](https://your-website.com/docs.html) for detailed guides.
 
-Using Python
-Installable Python kits, and information about using Python, are available at python.org.
+## 📸 Screenshots
+![AetherScript IDE](img/screenshot-hero.png)
 
-Build Instructions
-On Unix, Linux, BSD, macOS, and Cygwin:
+## 🌟 Current Status
+AetherScript is in early development, supporting:
+- Variables (`let x = 10;`)
+- Basic arithmetic (`+`, `-`, `*`, `/`)
+- Console output (`print`)
+- Single-line comments (`//`)
 
-./configure
-make
-make test
-sudo make install
-This will install Python as python3.
+## 🔮 Roadmap
+- Conditionals (`if`, `else`)
+- Loops (`for`, `while`)
+- Functions (`fn`)
+- User input
+- Structs and modules
 
-You can pass many options to the configure script; run ./configure --help to find out more. On macOS case-insensitive file systems and on Cygwin, the executable is called python.exe; elsewhere it's just python.
+## 🤝 Contributing
+We welcome contributions! Check out our [Contributing Guide](CONTRIBUTING.md) to get started. Join the discussion on [Discord](#) or open an issue to share ideas.
 
-Building a complete Python installation requires the use of various additional third-party libraries, depending on your build platform and configure options. Not all standard library modules are buildable or usable on all platforms. Refer to the Install dependencies section of the Developer Guide for current detailed information on dependencies for various Linux distributions and macOS.
+## 📚 Resources
+- [Official Website](https://your-website.com)
+- [Documentation](https://your-website.com/docs.html)
+- [Issues](https://github.com/your-username/aether-script/issues)
+- [Discussions](#)
 
-On macOS, there are additional configure and build options related to macOS framework and universal builds. Refer to Mac/README.rst.
+## 📝 License
+AetherScript is licensed under the [MIT License](LICENSE).
 
-On Windows, see PCbuild/readme.txt.
+---
 
-To build Windows installer, see Tools/msi/README.txt.
+**Code the future with AetherScript!** 🚀
+```
 
-If you wish, you can create a subdirectory and invoke configure from there. For example:
+---
 
-mkdir debug
-cd debug
-../configure --with-pydebug
-make
-make test
-(This will fail if you also built at the top-level directory. You should do a make clean at the top-level first.)
+### Подробности описания
 
-To get an optimized build of Python, configure --enable-optimizations before you run make. This sets the default make targets up to enable Profile Guided Optimization (PGO) and may be used to auto-enable Link Time Optimization (LTO) on some platforms. For more details, see the sections below.
+1. **Название и слоган**:
+   - `# AetherScript` и **A modern programming language designed for simplicity, safety, and performance** сразу задают тон.
+   - Упоминание Visual Studio Code связывает с эстетикой сайта.
 
-Profile Guided Optimization
-PGO takes advantage of recent versions of the GCC or Clang compilers. If used, either via configure --enable-optimizations or by manually running make profile-opt regardless of configure flags, the optimized build process will perform the following steps:
+2. **Особенности**:
+   - Описаны текущие возможности (переменные, арифметика, `print`) и будущие цели (безопасность памяти).
+   - Упоминается IDE на PyQt6, чтобы подчеркнуть простоту запуска.
 
-The entire Python directory is cleaned of temporary files that may have resulted from a previous compilation.
+3. **Инструкция по началу работы**:
+   - Краткие шаги для установки и запуска.
+   - Пример кода калькулятора из документации (`docs.html`) для наглядности.
 
-An instrumented version of the interpreter is built, using suitable compiler flags for each flavor. Note that this is just an intermediary step. The binary resulting from this step is not good for real-life workloads as it has profiling instructions embedded inside.
+4. **Скриншот**:
+   - Ссылка на `img/screenshot-hero.png`, как на сайте, чтобы показать IDE.
+   - Если изображения нет, замените на реальный путь после загрузки в репозиторий.
 
-After the instrumented interpreter is built, the Makefile will run a training workload. This is necessary in order to profile the interpreter's execution. Note also that any output, both stdout and stderr, that may appear at this step is suppressed.
+5. **Статус и дорожная карта**:
+   - Честно указано, что язык в ранней разработке, с перечислением текущих возможностей.
+   - Дорожная карта повторяет планы из документации (условия, циклы, функции).
 
-The final step is to build the actual interpreter, using the information collected from the instrumented one. The end result will be a Python binary that is optimized; suitable for distribution or production installation.
+6. **Призыв к участию**:
+   - Приглашение к контрибьюции с ссылками на гайд и сообщество.
+   - Discord и Discussions пока заглушки (замените реальными ссылками).
 
-Link Time Optimization
-Enabled via configure's --with-lto flag. LTO takes advantage of the ability of recent compiler toolchains to optimize across the otherwise arbitrary .o file boundary when building final executables or shared libraries for additional performance gains.
+7. **Ресурсы**:
+   - Ссылки на сайт и документацию (замените `https://your-website.com` на реальный домен).
+   - Упоминание GitHub Issues для обратной связи.
 
-What's New
-We have a comprehensive overview of the changes in the What's New in Python 3.14 document. For a more detailed change log, read Misc/NEWS, but a full accounting of changes can only be gleaned from the commit history.
+8. **Лицензия**:
+   - MIT License, как указано на сайте в футере.
+     MIT License
 
-If you want to install multiple versions of Python, see the section below entitled "Installing multiple versions".
+     Copyright (c) 2025 AetherScript
 
-Documentation
-Documentation for Python 3.14 is online, updated daily.
+     Permission is hereby granted, free of charge, to any person obtaining a copy
+     of this software and associated documentation files (the "Software"), to deal
+     in the Software without restriction, including without limitation the rights
+     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     copies of the Software, and to permit persons to whom the Software is
+     furnished to do so, subject to the following conditions:
 
-It can also be downloaded in many formats for faster access. The documentation is downloadable in HTML, PDF, and reStructuredText formats; the latter version is primarily for documentation authors, translators, and people with special formatting requirements.
+     The above copyright notice and this permission notice shall be included in all
+     copies or substantial portions of the Software.
 
-For information about building Python's documentation, refer to Doc/README.rst.
+     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+     SOFTWARE.
+     ```
 
-Testing
-To test the interpreter, type make test in the top-level directory. The test set produces some output. You can generally ignore the messages about skipped tests due to optional features which can't be imported. If a message is printed about a failed test or a traceback or core dump is produced, something is wrong.
 
-By default, tests are prevented from overusing resources like disk space and memory. To enable these tests, run make buildbottest.
-
-If any tests fail, you can re-run the failing test(s) in verbose mode. For example, if test_os and test_gdb failed, you can run:
-
-make test TESTOPTS="-v test_os test_gdb"
-If the failure persists and appears to be a problem with Python rather than your environment, you can file a bug report and include relevant output from that command to show the issue.
-
-See Running & Writing Tests for more on running tests.
-
-Installing multiple versions
-On Unix and Mac systems if you intend to install multiple versions of Python using the same installation prefix (--prefix argument to the configure script) you must take care that your primary python executable is not overwritten by the installation of a different version. All files and directories installed using make altinstall contain the major and minor version and can thus live side-by-side. make install also creates ${prefix}/bin/python3 which refers to ${prefix}/bin/python3.X. If you intend to install multiple versions using the same prefix you must decide which version (if any) is your "primary" version. Install that version using make install. Install all other versions using make altinstall.
-
-For example, if you want to install Python 2.7, 3.6, and 3.14 with 3.14 being the primary version, you would execute make install in your 3.14 build directory and make altinstall in the others.
-
-Release Schedule
-See PEP 745 for Python 3.14 release details.
-
-Copyright and License Information
-Copyright © 2001 Python Software Foundation. All rights reserved.
-
-Copyright © 2000 BeOpen.com. All rights reserved.
-
-Copyright © 1995-2001 Corporation for National Research Initiatives. All rights reserved.
-
-Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.
-
-See the LICENSE for information on the history of this software, terms & conditions for usage, and a DISCLAIMER OF ALL WARRANTIES.
-
-This Python distribution contains no GNU General Public License (GPL) code, so it may be used in proprietary projects. There are interfaces to some GNU code but these are entirely optional.
-
-All trademarks referenced herein are property of their respective holders.
+     Happy coding! 🚀
+     ```
