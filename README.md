@@ -27,7 +27,7 @@ AetherScript is a beginner-friendly language with a clean, Python-like syntax, p
    print("Sum: ");
    print(sum); // Outputs: 15
    ```
-4. Explore the [Documentation](https://your-website.com/docs.html) for detailed guides.
+4. Explore the [Documentation](https://your-website.com/docs.html](https://nicetink.github.io/webdoc) for detailed guides.
 
 ## 📸 Screenshots
 ![AetherScript IDE](img/screenshot-hero.png)
@@ -51,49 +51,14 @@ We welcome contributions! Check out our [Contributing Guide](CONTRIBUTING.md) to
 
 ## 📚 Resources
 - [Official Website](https://your-website.com)
-- [Documentation](https://your-website.com/docs.html)
-- [Issues](https://github.com/your-username/aether-script/issues)
-- [Discussions](#)
+- [Documentation](https://your-website.com/docs.html](https://nicetink.github.io/webdoc)
 
 ## 📝 License
-AetherScript is licensed under the [MIT License](LICENSE).
+AetherScript is licensed under the [NSPL License](LICENSE).
 
 ---
 
 **Code the future with AetherScript!** 🚀
-```
-
----
-
-### Подробности описания
-
-1. **Название и слоган**:
-   - `# AetherScript` и **A modern programming language designed for simplicity, safety, and performance** сразу задают тон.
-   - Упоминание Visual Studio Code связывает с эстетикой сайта.
-
-2. **Особенности**:
-   - Описаны текущие возможности (переменные, арифметика, `print`) и будущие цели (безопасность памяти).
-   - Упоминается IDE на PyQt6, чтобы подчеркнуть простоту запуска.
-
-3. **Инструкция по началу работы**:
-   - Краткие шаги для установки и запуска.
-   - Пример кода калькулятора из документации (`docs.html`) для наглядности.
-
-4. **Скриншот**:
-   - Ссылка на `img/screenshot-hero.png`, как на сайте, чтобы показать IDE.
-   - Если изображения нет, замените на реальный путь после загрузки в репозиторий.
-
-5. **Статус и дорожная карта**:
-   - Честно указано, что язык в ранней разработке, с перечислением текущих возможностей.
-   - Дорожная карта повторяет планы из документации (условия, циклы, функции).
-
-6. **Призыв к участию**:
-   - Приглашение к контрибьюции с ссылками на гайд и сообщество.
-   - Discord и Discussions пока заглушки (замените реальными ссылками).
-
-7. **Ресурсы**:
-   - Ссылки на сайт и документацию (замените `https://your-website.com` на реальный домен).
-   - Упоминание GitHub Issues для обратной связи.
 
 8. **Лицензия**:
    - NSPL License, как указано на сайте в футере.
