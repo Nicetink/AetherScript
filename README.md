@@ -7,7 +7,7 @@ AetherScript is a beginner-friendly language with a clean, Python-like syntax, p
 - **Arithmetic Operations**: Supports `+`, `-`, `*`, `/` for numerical computations.
 - **Lightweight IDE**: Run your `.aether` scripts in the AetherScript IDE, built with Python and PyQt6.
 - **Memory Safety**: Designed with safety in mind, inspired by Rust (future goal).
-- **Open Source**: Licensed under MIT, welcoming contributions from the community.
+- **Open Source**: Licensed under NSPL, welcoming contributions from the community.
 
 ## 🚀 Getting Started
 1. **Install Dependencies**:
