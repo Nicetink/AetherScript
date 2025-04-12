@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>AetherScript Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: #161b22;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        nav a {
+            color: #c9d1d9;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        .download-btn {
+            background: #238636;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2ea043;
+        }
+
+        /* Main Content */
+        .docs {
+            max-width: 800px;
+            margin: 100px auto 2rem;
+            padding: 2rem;
+            background: #161b22;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .docs h1 {
+            font-size: 2.5rem;
+            color: #f0f6fc;
+            margin-bottom: 1rem;
+        }
+
+        .docs h2 {
+            font-size: 1.8rem;
+            color: #f0f6fc;
+            margin: 2rem 0 1rem;
+        }
+
+        .docs h3 {
+            font-size: 1.4rem;
+            color: #c9d1d9;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .docs p {
+            color: #8b949e;
+            margin-bottom: 1rem;
+        }
+
+        .docs ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .docs ul li {
+            color: #c9d1d9;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .docs ul li::before {
+            content: "•";
+            color: #58a6ff;
+            position: absolute;
+            left: 0;
+        }
+
+        .docs code {
+            background: #2a2a3e;
+            color: #d4d4d4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+        }
+
+        .docs pre {
+            background: #2a2a3e;
+            color: #d4d4d4;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            font-family: 'Consolas', monospace;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .docs pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Syntax highlighting */
+        .docs pre .keyword {
+            color: #569cd6;
+            font-weight: bold;
+        }
+
+        .docs pre .string {
+            color: #ce9178;
+        }
+
+        .docs pre .number {
+            color: #b5cea8;
+        }
+
+        .docs pre .comment {
+            color: #6a9955;
+        }
+
+        .docs a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        .docs a:hover {
+            color: #79c0ff;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1117;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #30363d;
+        }
+
+        footer p {
+            color: #8b949e;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: #79c0ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .docs {
+                margin: 80px 1rem 1rem;
+                padding: 1rem;
+            }
+
+            .docs h1 {
+                font-size: 2rem;
+            }
+
+            .docs h2 {
+                font-size: 1.5rem;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">AetherScript</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="docs.html">Docs</a>
+            <a href="#download">Download</a>
+            <a href="#community">Community</a>
+        </nav>
+        <a href="#download" class="download-btn">Download</a>
+    </header>
+
+    <!-- Documentation -->
+    <section class="docs">
+        <h1>AetherScript Documentation</h1>
+        <p>Welcome to the official documentation for AetherScript, a modern programming language designed for simplicity, safety, and performance.</p>
+
+        <h2>Introduction</h2>
+        <p>AetherScript is a beginner-friendly language with a clean, Python-like syntax. In its current version, it supports variables, arithmetic operations, and console output, making it perfect for learning and building simple programs like calculators or data processing scripts.</p>
+
+        <h2>Installation</h2>
+        <h3>Step 1: Download AetherScript IDE</h3>
+        <p>Download the AetherScript IDE from the <a href="#download">official website</a>. The IDE requires Python 3.8+ and PyQt6.</p>
+        <pre><code class="bash">pip install PyQt6</code></pre>
+
+        <h3>Step 2: Run the IDE</h3>
+        <p>Save the IDE as <code>aetheride.py</code> and run it using Python:</p>
+        <pre><code class="bash">python aetheride.py</code></pre>
+
+        <h3>Step 3: Create a File</h3>
+        <p>In the IDE, click "New" to start coding. Save your files with the <code>.aether</code> extension.</p>
+
+        <h2>Syntax</h2>
+        <p>AetherScript’s syntax is designed to be intuitive. Here are the key features in the current version:</p>
+
+        <h3>1. Variables</h3>
+        <p>Declare variables using the <code class="keyword">let</code> keyword.</p>
+        <pre><code><span class="keyword">let</span> x = <span class="number">10</span>;
+<span class="keyword">let</span> name = <span class="string">"Alice"</span>;</code></pre>
+
+        <h3>2. Arithmetic Operations</h3>
+        <p>Supported operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>.</p>
+        <pre><code><span class="keyword">let</span> a = <span class="number">5</span>;
+<span class="keyword">let</span> b = <span class="number">3</span>;
+<span class="keyword">let</span> sum = a + b; <span class="comment">// 8</span></code></pre>
+
+        <h3>3. Console Output</h3>
+        <p>Use <code class="keyword">print</code> to display values.</p>
+        <pre><code><span class="keyword">print</span>(<span class="string">"Hello, AetherScript!"</span>);
+<span class="keyword">print</span>(<span class="number">42</span>);</code></pre>
+
+        <h3>4. Comments</h3>
+        <p>Single-line comments start with <code>//</code>.</p>
+        <pre><code><span class="comment">// This is a comment</span>
+<span class="keyword">let</span> x = <span class="number">10</span>; <span class="comment">// Variable declaration</span></code></pre>
+
+        <h2>Example: Simple Calculator</h2>
+        <p>Below is an example of a program that performs basic arithmetic operations:</p>
+        <pre><code><span class="comment">// Simple calculator on AetherScript</span>
+<span class="keyword">let</span> a = <span class="number">10</span>;           <span class="comment">// First number</span>
+<span class="keyword">let</span> b = <span class="number">5</span>;            <span class="comment">// Second number</span>
+
+<span class="comment">// Operations</span>
+<span class="keyword">let</span> sum = a + b;      <span class="comment">// Addition</span>
+<span class="keyword">let</span> diff = a - b;     <span class="comment">// Subtraction</span>
+<span class="keyword">let</span> prod = a * b;     <span class="comment">// Multiplication</span>
+<span class="keyword">let</span> div = a / b;      <span class="comment">// Division</span>
+
+<span class="comment">// Output results</span>
+<span class="keyword">print</span>(<span class="string">"Sum: "</span>);
+<span class="keyword">print</span>(sum);           <span class="comment">// 15</span>
+<span class="keyword">print</span>(<span class="string">"Difference: "</span>);
+<span class="keyword">print</span>(diff);          <span class="comment">// 5</span>
+<span class="keyword">print</span>(<span class="string">"Product: "</span>);
+<span class="keyword">print</span>(prod);          <span class="comment">// 50</span>
+<span class="keyword">print</span>(<span class="string">"Division: "</span>);
+<span class="keyword">print</span>(div);           <span class="comment">// 2</span></code></pre>
+        <p><strong>Run it</strong>: Copy this code into AetherScript IDE, click "Run" (▶), and see the results in the output panel.</p>
+
+        <h2>Limitations</h2>
+        <p>The current version of AetherScript:</p>
+        <ul>
+            <li>Supports only integers, floating-point numbers, strings, and basic arithmetic.</li>
+            <li>Does not include loops, conditionals (<code>if</code>), functions, or user input.</li>
+            <li>Runs only within AetherScript IDE.</li>
+        </ul>
+
+        <h2>Future Features</h2>
+        <p>We plan to add:</p>
+        <ul>
+            <li>Conditionals (<code>if</code>, <code>else</code>).</li>
+            <li>Loops (<code>for</code>, <code>while</code>).</li>
+            <li>Functions (<code>fn</code>).</li>
+            <li>Keyboard input.</li>
+            <li>Support for structs and modules.</li>
+        </ul>
+
+        <h2>Debugging</h2>
+        <p>If your program fails, check:</p>
+        <ul>
+            <li>All statements end with <code>;</code>.</li>
+            <li>Variables are declared before use.</li>
+        </ul>
+        <p>Errors appear in the IDE’s output panel, e.g.:</p>
+        <pre><code><span class="keyword">let</span> x = y; <span class="comment">// Error: Undefined variable: y</span></code></pre>
+
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="#community">Community</a>: Join discussions on GitHub and Discord.</li>
+            <li><a href="#github">Source Code</a>: Available on GitHub.</li>
+            <li><a href="#contact">Feedback</a>: Reach out via email or Discord.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 AetherScript. Licensed under MIT.</p>
+        <div>
+            <a href="#github"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#discord"><i class="fab fa-discord"></i> Discord</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // Animations
+        gsap.from("header", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
+        gsap.from(".docs h1", { opacity: 0, y: 50, duration: 1, delay: 0.5, ease: "power3.out" });
+        gsap.from(".docs p", { opacity: 0, y: 50, duration: 1, delay: 0.7, ease: "power3.out" });
+        gsap.from(".docs h2", { opacity: 0, y: 50, duration: 1, delay: 0.9, ease: "power3.out" });
+        gsap.from(".docs pre", { opacity: 0, scale: 0.95, duration: 1, delay: 1.1, ease: "back.out(1.7)" });
+    </script>
+</body>
+</html>

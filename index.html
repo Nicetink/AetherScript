@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherScript Official Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: #161b22;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        nav a {
+            color: #c9d1d9;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        .download-btn {
+            background: #238636;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2ea043;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.8) 0%, rgba(33, 38, 45, 0.8) 100%),
+                        url('img/screenshot-hero.png') no-repeat center center;
+            background-size: cover;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #f0f6fc;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #c9d1d9;
+        }
+
+        .hero .download-btn {
+            font-size: 1.1rem;
+            padding: 0.75rem 2rem;
+        }
+
+        /* Features */
+        .features {
+            padding: 4rem 2rem;
+            background: #161b22;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #f0f6fc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #21262d;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            color: #58a6ff;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #f0f6fc;
+        }
+
+        .feature-card p {
+            color: #8b949e;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #0d1117;
+        }
+
+        .screenshots h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #f0f6fc;
+        }
+
+        .screenshot-carousel {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            padding: 0 1rem;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .carousel-controls button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Community */
+        .community {
+            padding: 4rem 2rem;
+            background: #161b22;
+            text-align: center;
+        }
+
+        .community h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0f6fc;
+        }
+
+        .community p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #8b949e;
+        }
+
+        .community a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .community a:hover {
+            color: #79c0ff;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1117;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #30363d;
+        }
+
+        footer p {
+            color: #8b949e;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: #79c0ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">AetherScript</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#docs">Docs</a>
+            <a href="#download">Download</a>
+            <a href="#community">Community</a>
+        </nav>
+        <a href="#download" class="download-btn">Download</a>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>AetherScript: is a simple programming language</h1>
+            <p>A modern programming language designed for simplicity, safety, and performance. Build easy applications with ease.</p>
+            <a href="#download" class="download-btn">Download Now</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <h2>Why Choose AetherScript?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Memory Safety</h3>
+                <p>Eliminate memory bugs with built-in safety guarantees, inspired by Rust.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>High Performance</h3>
+                <p>Compiled to efficient machine code for blazing-fast execution.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-code"></i>
+                <h3>Simple Syntax</h3>
+                <p>Write clean, readable code with a Python-like syntax.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Concurrency</h3>
+                <p>Built-in async/await and lightweight threads for scalable apps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots" id="screenshots">
+        <h2>See AetherScript in Action</h2>
+        <div class="screenshot-carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="img/screenshot1.png" alt="AetherScript IDE Screenshot 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/screenshot2.png" alt="AetherScript IDE Screenshot 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/screenshot3.png" alt="AetherScript IDE Screenshot 3">
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community -->
+    <section class="community" id="community">
+        <h2>Join the Community</h2>
+        <p>Explore our documentation, contribute to AetherScript, or join discussions on GitHub and Discord.</p>
+        <a href="#docs">Read Docs</a> | <a href="#https://technical.city/ru/video/Radeon-HD-5830-protiv-GeForce-GT-630">GitHub</a> | <a href="#discord">Discord</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Nicet Software and Nicet ink & 4KEY. Licensed under NSPL 1.0.</p>
+        <div>
+            <a href="#github"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#discord"><i class="fab fa-discord"></i> Discord</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // Animations
+        gsap.from("header", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
+        gsap.from(".hero h1", { opacity: 0, y: 50, duration: 1, delay: 0.5, ease: "power3.out" });
+        gsap.from(".hero p", { opacity: 0, y: 50, duration: 1, delay: 0.7, ease: "power3.out" });
+        gsap.from(".hero .download-btn", { opacity: 0, scale: 0.8, duration: 1, delay: 0.9, ease: "back.out(1.7)" });
+        gsap.from(".hero", { 
+            backgroundPosition: "center 20%", 
+            opacity: 0, 
+            duration: 1.5, 
+            delay: 1, 
+            ease: "power3.out" 
+        });
+
+        // Feature cards animation on scroll
+        gsap.utils.toArray(".feature-card").forEach(card => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    end: "top 50%",
+                    scrub: 1
+                }
+            });
+        });
+
+        // Carousel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".carousel-item");
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            const offset = -currentSlide * 100;
+            document.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Auto-scroll carousel
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
