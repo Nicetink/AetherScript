@@ -16,7 +16,7 @@ AetherScript is a beginner-friendly language with a clean, Python-like syntax, p
    ```
 2. **Run the IDE**:
    ```bash
-   python aetheride.py
+   python ide.py
    ```
 3. **Write Your First Program**:
    ```aether
