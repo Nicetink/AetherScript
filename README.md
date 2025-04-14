@@ -20,13 +20,13 @@ A modern programming environment designed for **simplicity**, **safety**, and an
 ## 🚀 Getting Started
 
 1. **Download the Installer**:
-   - [AetherScriptIDE_Setup.exe](https://github.com/your-username/aether-script/releases/download/v1.0/AetherScriptIDE_Setup.exe)
+   - [AetherScriptIDE_Setup.exe](https://github.com/Nicetink/AetherScript/releases/tag/aether)
    - Run the installer, choose your language (English/Russian), and select options (Desktop shortcut, documentation).
 
 2. **Run from Source** (optional):
    ```bash
    pip install PyQt6==6.7.0 Pillow==10.4.0
-   python aetheride.py
+   python ide.py
    ```
 
 3. **Write Your First Program**:
@@ -42,20 +42,6 @@ A modern programming environment designed for **simplicity**, **safety**, and an
    ```
 
 4. Explore the [Documentation](https://github.com/your-username/aether-script/releases/download/v1.0/AetherScript_Documentation.pdf) for detailed guides.
-
-## 📸 Screenshots
-
-![AetherScript IDE](https://your-host.com/img/screenshot1.png)  
-*Main window with dark theme and sample code*
-
-![File Explorer](https://your-host.com/img/screenshot3.png)  
-*QTreeView file manager in action*
-
-![Light Theme](https://your-host.com/img/screenshot2.png)  
-*Coding in light theme*
-
-![About Dialog](https://your-host.com/img/screenshot4.png)  
-*About dialog with custom icon*
 
 ## 🌟 Current Status
 
