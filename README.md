@@ -14,7 +14,6 @@ A modern programming environment designed for **simplicity**, **safety**, and an
 - **Safe Execution**: Uses `ast.literal_eval` to prevent code injection, optimized for minimal antivirus false positives (0–2 detections on VirusTotal).
 - **Lightweight IDE**: Built with PyQt6, offering a fast and responsive experience.
 - **Installer**: A beautiful Inno Setup installer (`AetherScriptIDE_Setup.exe`) with English/Russian support and optional documentation.
-- **Documentation**: Comprehensive `AetherScript_Documentation.pdf` included.
 - **Open Source**: Licensed under the NSPL, welcoming contributions from the community.
 
 ## 🚀 Getting Started
